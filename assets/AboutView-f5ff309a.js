@@ -1,0 +1,1 @@
+import{o as r,c as s}from"./index-08db04e9.js";const a=(t,e)=>{const o=t.__vccOpts||t;for(const[c,n]of e)o[c]=n;return o},_={},l={class:"w-full max-w-4xl mx-auto py-10"};function f(t,e){return r(),s("main",l,"Nothing In Here!")}const m=a(_,[["render",f]]);export{m as default};
