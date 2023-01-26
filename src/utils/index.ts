@@ -7,8 +7,8 @@ export const generateSentence = () => {
   for (let i = 0; i < senLength; i++) {
     words.push(Words[Math.round(Math.random() * Words.length)]);
   }
+  words[0] = words[0][0].toUpperCase() + words[0].slice(1);
 
-  console.log(words.join(" "));
   return words.join(" ");
 };
 
