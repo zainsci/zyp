@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import KeyBoard from "@/components/KeyBoard.vue";
 import { rootStore } from "@/stores";
 
 const store = rootStore();
@@ -32,7 +33,7 @@ function toggleTimeFrame() {
 </script>
 
 <template>
-  <main class="w-full max-w-4xl mx-auto py-10">
+  <main class="w-full max-w-4xl mx-auto py-4">
     <div
       class="mb-6 px-4 py-2 bg-gray-200 rounded-sm flex justify-between space-x-2"
     >
@@ -81,17 +82,17 @@ function toggleTimeFrame() {
       class="bg-gray-100 rounded-sm select-none w-full max-w-4xl mx-auto relative overflow-hidden"
     >
       <div
-        class="absolute top-0 left-0 w-full max-w-4xl h-full mx-auto bg-transparent text-2xl font-mono p-4 text-gray-700"
+        class="absolute top-0 left-0 w-full max-w-4xl h-full mx-auto bg-transparent text-xl font-mono p-4 text-gray-700"
       >
         <div
           v-html="store.typeArr.join('')"
           class="after:content-['|'] after:inline-block after:-translate-x-[6px] after:-translate-y-[2px] after:animate-pulse"
         ></div>
       </div>
-      <div class="text-2xl font-mono p-4 text-gray-400">
+      <div class="text-xl font-mono p-4 text-gray-400">
         {{ store.initText }}
       </div>
     </div>
-    <div></div>
+    <KeyBoard />
   </main>
 </template>
