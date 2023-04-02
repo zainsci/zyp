@@ -86,7 +86,7 @@ function toggleTimeFrame() {
       >
         <div
           v-html="store.typeArr.join('')"
-          class="after:content-['|'] after:inline-block after:-translate-x-[6px] after:-translate-y-[2px] after:animate-pulse"
+          class="after:content-['|'] after:inline-block after:-translate-x-[6px] after:-translate-y-[2px] after:animate-pulse break-words"
         ></div>
       </div>
       <div class="text-xl font-mono p-4 text-gray-400">
