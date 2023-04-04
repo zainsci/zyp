@@ -90,7 +90,9 @@ function renderKeyValue(key: string | { key: string; value: string }) {
 </script>
 
 <template>
-  <div class="w-full bg-gray-200 rounded-sm p-4 mt-6 space-y-1">
+  <div
+    class="w-full bg-gray-200 dark:bg-gray-800 dark:text-gray-300 rounded-sm p-4 mt-6 space-y-1"
+  >
     <div
       v-for="row in newKeyRows"
       :key="typeof row[0] === 'string' ? row[0] : row[0].value"
@@ -99,7 +101,7 @@ function renderKeyValue(key: string | { key: string; value: string }) {
       <div
         v-for="key in row"
         :key="typeof key === 'string' ? key : key.value"
-        class="bg-gray-100 min-w-[3rem] select-none"
+        class="bg-gray-100 dark:bg-gray-700 min-w-[3rem] select-none rounded-sm overflow-hidden"
         :class="getKeyClassName(key)"
       >
         <div
@@ -107,10 +109,10 @@ function renderKeyValue(key: string | { key: string; value: string }) {
           :class="
             typeof key !== 'string'
               ? key.key === currentKey
-                ? 'bg-gray-400'
+                ? 'bg-gray-300 dark:bg-gray-600'
                 : ''
               : key === currentKey
-              ? 'bg-gray-400'
+              ? 'bg-gray-300 dark:bg-gray-600'
               : ''
           "
         >
